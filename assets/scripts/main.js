@@ -7,3 +7,12 @@ document.getElementById("toggle-theme").onclick = () => {
     document.getElementById("toggle-theme").src = "assets/icons/ligth.webp";
   }
 };
+let task = "";
+document.getElementById("add-task-btn").onclick = () => {
+  let inputTask = document.getElementById("task-input").value;
+  if (inputTask.trim() !== "") { 
+    task += `<li>${inputTask}</li>`; 
+    document.getElementById("task-list").innerHTML = task; 
+    document.getElementById("task-input").value = ""; 
+  }
+};

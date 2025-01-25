@@ -5,10 +5,11 @@
 }
 :root {
   --main-color: #8D77AB;
-  --btn-color: white;
   --text-color: black;
+  --bg-btn:#C8AAAA;
   --list-bg: white;
-  --item-color: rgb(242, 242, 242);
+  --hover-bg:#9c8679;
+  --item-color:#D6C0B3;
 }
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -16,9 +17,10 @@ body {
 }
 body.dark-theme {
   --main-color: #030a13;
-  --btn-color: white;
   --text-color: rgb(255, 255, 255);
-  --list-bg: #3A3960;
+  --list-bg: #1C325B;
+  --bg-btn:#5C7285;
+  --hover-bg:#09122C;
   --item-color: #21203d;
 }
 img {
@@ -79,6 +81,9 @@ section .todo-list button {
   padding: 10px;
 margin-top: 100px;
 }
+.btn:hover{
+background-color:var(--bg-btn);
+}
 section .todo-list button {
   width: 100px;
   font-weight: bold;
@@ -88,3 +93,23 @@ section .todo-list button {
 section input {
   width: calc(100% - 105px);
 }
+section ol {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: var(--list-bg);
+}
+section ol li {
+  margin: 10px 0;
+  padding: 10px;
+  color: var(--text-color);
+  line-height: 1.5;
+  background-color: var(--item-color);
+  box-shadow: 0 4px 6px  var(--hover-bg);
+  border-radius: 4px;
+}
+
+section ol li:hover{
+  background-color:var( --hover-bg);
+  transform: scale(1.02);
+}
+
